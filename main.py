@@ -14,6 +14,7 @@ SUBDOMAIN = os.environ.get("SUBDOMAIN")
 
 domains = open('domains.txt').read().splitlines()
 
+
 def update():
     domain = random.choice(domains)
 
@@ -32,7 +33,7 @@ def update():
         })
     assert resp.status_code == 200
 
-    print('updated dns record for {} to {}'.format(SUBDOMAIN,domain))
+    print('updated dns record for {} to {}'.format(SUBDOMAIN, domain))
 
 
 while True:
